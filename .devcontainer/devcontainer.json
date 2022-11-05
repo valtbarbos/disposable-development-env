@@ -1,0 +1,13 @@
+{
+  "image": "quay.io/ansible/creator-ee:latest",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "redhat.ansible",
+        "redhat.vscode-yaml",
+        "ms-vscode-remote.remote-containers",
+        "esbenp.prettier-vscode"
+      ]
+    }
+  }
+}
