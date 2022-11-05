@@ -1,0 +1,18 @@
+---
+- name: Main
+  hosts: alvertsworks-01
+  become: true
+
+  vars_files:
+    - vars.yml
+
+  pre_tasks:
+    - name: Update apt cache if needed.
+      ansible.builtin.apt:
+        cmd: update_cache=true cache_valid_time=3600
+
+  tasks:
+    - name: Health check.
+      ansible.builtin.command: echo "OK"
+      register: response
+      changed_when: response.rc != 0

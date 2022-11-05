@@ -5,9 +5,8 @@ Vagrant.configure("2") do |config|
   config.vm.define "alvertsworks-01"
   config.vagrant.plugins = ['vagrant-vbguest']
 
-  config.vm.network "private_network", ip: "192.168.33.10"
-  config.vm.network "forwarded_port", guest: 80, host: 8080, host_ip: "127.0.0.1"
-  config.vm.network "public_network"
+  #config.ssh.insert_key = false
+  config.vm.network "public_network", ip: "192.168.50.2", bridge: ["en1: Wi-Fi (AirPort)"]
 
   config.vm.synced_folder "./", "/home/vagrant/projects"
 
