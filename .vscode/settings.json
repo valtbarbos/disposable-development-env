@@ -1,0 +1,34 @@
+{
+  "editor.fontSize": 16,
+  "window.zoomLevel": 0,
+  "debug.console.fontSize": 16,
+  "terminal.integrated.fontSize": 16,
+  "files.associations": {
+    "**/playbooks/*.yml": "ansible",
+    "**/playbooks/*.yaml": "ansible",
+    "**/hostvars/*.yml": "ansible",
+    "**/group_vars/*.yml": "ansible",
+    "**/tasks/*.yaml": "ansible",
+    "**/tasks/*.yml": "ansible",
+    "**/defaults/*.yaml": "ansible",
+    "**/defaults/*.yml": "ansible",
+    "**/vars/*.yaml": "ansible",
+    "**/vars/*.yml": "ansible",
+    "**/meta/*.yaml": "ansible",
+    "**/meta/*.yml": "ansible",
+    "**/handlers/*.yaml": "ansible",
+    "**/handlers/*.yml": "ansible"
+  },
+  // "yaml.schemas": {
+  //   "https://raw.githubusercontent.com/ansible-community/schemas/main/f/ansible.json#/$defs/tasks": "file:///f%3A/_infra/hetzner/playbooks/98-interface-restart.yml"
+  // },
+  // "ansible.executionEnvironment.containerEngine": "auto",
+  // "ansible.executionEnvironment.enabled": false,
+  // "ansible.executionEnvironment.image": "quay.io/ansible/creator-ee:latest",
+  "ansible.ansible.useFullyQualifiedCollectionNames": false,
+  "ansibleServer.trace.server": "verbose",
+  "ansible.python.interpreterPath": "/usr/bin/python3",
+  "ansible.ansibleLint.enabled": true,
+  "ansible.ansible.path": "/usr/local/bin/ansible",
+  "ansible.validation.lint.path": "/usr/local/bin/ansible-lint",
+}
