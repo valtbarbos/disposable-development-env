@@ -11,10 +11,31 @@
       ansible.builtin.apt:
         upgrade: false
         update_cache: true
+        install_recommends: true
         cache_valid_time: 86400 # one day
 
   tasks:
-    - name: Health check.
-      ansible.builtin.command: echo "OK"
-      register: response
-      changed_when: response.rc != 0
+    - name: Install htop.
+      ansible.builtin.package:
+        name: htop
+        state: present
+
+    - name: Install net-tools.
+      ansible.builtin.package:
+        name: net-tools
+        state: present
+
+    - name: Install tmux.
+      ansible.builtin.package:
+        name: tmux
+        state: present
+
+    - name: Install curl.
+      ansible.builtin.package:
+        name: curl
+        state: present
+
+    - name: Install git.
+      ansible.builtin.package:
+        name: git
+        state: present
