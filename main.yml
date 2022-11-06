@@ -1,6 +1,6 @@
 ---
 - name: Main
-  hosts: alvertsworks-01
+  hosts: alvertsworks01
   become: true
 
   vars_files:
@@ -9,7 +9,9 @@
   pre_tasks:
     - name: Update apt cache if needed.
       ansible.builtin.apt:
-        cmd: update_cache=true cache_valid_time=3600
+        upgrade: false
+        update_cache: true
+        cache_valid_time: 86400 # one day
 
   tasks:
     - name: Health check.
